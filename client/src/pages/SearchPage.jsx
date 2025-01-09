@@ -26,7 +26,11 @@ const SearchPage = () => {
               search : searchText ,
               page : page,
             }
-        })
+            
+            
+            
+          })
+          console.log(searchText);
 
         const { data : responseData } = response
 

@@ -85,15 +85,15 @@ const CategoryPage = () => {
 
         <div className='p-4 grid  grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2'>
             {
-                categoryData.map((category,index)=>{
+                categoryData.map((category)=>{
                     return(
-                        <div className='w-32 h-56 rounded shadow-md' key={category._id}>
+                        <div className='p-5 rounded shadow-md' key={category._id}>
                             <img 
                                 alt={category.name}
                                 src={category.image}
                                 className='w-full object-scale-down'
                             />
-                            <div className='items-center h-9 flex gap-2'>
+                            <div className='items-center h-9 mt-3 flex gap-2'>
                                 <button onClick={()=>{
                                     setOpenEdit(true)
                                     setEditData(category)

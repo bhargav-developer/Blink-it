@@ -19,13 +19,14 @@ const auth = async(request,response,next)=>{
                 success : false
             })
         }
+        console.log("Running")
 
         request.userId = decode.id
 
         next()
 
     } catch (error) {
-        console.log(error)
+
         return response.status(500).json({
             message : "You have not login",///error.message || error,
             error : true,
